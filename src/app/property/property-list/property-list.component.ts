@@ -1,4 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HousingService } from 'src/app/services/housing.service';
+import { IProperty } from '../IProperty.interface';
 
 @Component({
   selector: 'app-property-list',
@@ -6,45 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-list.component.css'],
 })
 export class PropertyListComponent implements OnInit {
-  Property: any = [
-    {
-      Id: 1,
-      Type: 'House',
-      Price: 4055520,
-      Name: 'Vila House',
-    },
-    {
-      Id: 2,
-      Type: 'Appartama',
-      Price: 12055520,
-      Name: '3 Bed House',
-    },
-    {
-      Id: 3,
-      Type: 'Condominium',
-      Price: 355520,
-      Name: '3 Bed House',
-    },
-    {
-      Id: 4,
-      Type: 'Stair',
-      Price: 12055520,
-      Name: 'Stair House',
-    },
-    {
-      Id: 1,
-      Type: 'Ground',
-      Price: 255520,
-      Name: 'Ground House',
-    },
-    {
-      Id: 1,
-      Type: 'Paint',
-      Price: 1955520,
-      Name: 'Paint House',
-    },
-  ];
-  constructor() {}
+  SellRent =1;
+  properties: Array<IProperty>=[];
+  constructor(private route:ActivatedRoute, private housingServices:HousingService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if(this.route.snapshot.url.toString()){
+      this.SellRent=2;
+    }
+   this.housingServices.getAllProperties(this.SellRent).subscribe(
+      data=>{
+        this.properties=data;
+        console.log(data);
+      }
+   )
+  }
 }

@@ -1,0 +1,50 @@
+ [
+  {
+    "Id":1,
+    "SellRent":1,
+    "Type":"House",
+    "Price":4055520,
+    "Name":"Vila House",
+    "Image":"HP2"
+  },
+  {
+    "Id":2,
+    "SellRent":1,
+    "Type":"Appartama",
+    "Price":12055520,
+    "Name":"3 Bed House",
+    "Image":"HP3"
+  },
+  {
+    "Id":3,
+    "SellRent":1,
+    "Type":"Condominium",
+    "Price":355520,
+    "Name":"3 Bed House",
+    "Image":"prop-3"
+  },
+  {
+    "Id":4,
+    "SellRent":2,
+    "Type":"Stair",
+    "Price":12055520,
+    "Name":"Stair House",
+    "Image":"prop-4"
+  },
+  {
+    "Id":5,
+    "SellRent":2,
+    "Type":"Ground",
+    "Price":255520,
+    "Name":"Ground House",
+    "Image":"HP4"
+  },
+  {
+    "Id":6,
+    "SellRent":2,
+    "Type":"Paint",
+    "Price":1955520,
+    "Name":"Paint House"
+
+  }
+]
